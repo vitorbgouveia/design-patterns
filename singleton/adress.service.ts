@@ -4,7 +4,7 @@ import logger from './logger';
 
 const getAdrres = async (req: Request, res: Response) => {
     if ((Math.random() * 10) > 5) {
-      logger.add(new Error(`Error aleatório ${(Math.random() * 100000).toFixed()}`).message);
+      return logger.add(new Error(`Error aleatório ${(Math.random() * 100000).toFixed()}`).message);
     }
 
     return await axios.get(`http://viacep.com.br/ws/${req.params.cep}/json/`)
