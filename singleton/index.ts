@@ -2,7 +2,7 @@
 import cors from 'cors';
 import express from 'express';
 import logger from './logger';
-import getAdrres from './adress.service';
+import getAdress from './adress.service';
 
 const app = express();
 
@@ -15,7 +15,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/adress/:cep', (req, res) => {
-  getAdrres(req, res);
+  getAdress(req, res);
 });
 
 const port = 3000;

@@ -14,8 +14,8 @@ class Logger {
     this.config.appName = name;
   }
 
-  add(log: string) {
-    this.logs.push(log);
+  add(log: Error) {
+    this.logs.push(log.message);
 
     console.log(`${this.logs.join(' \n')} \n ----------------------------------`);
   }
